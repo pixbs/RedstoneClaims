@@ -1,7 +1,0 @@
-name: RedstoneClaims
-version: '${project.version}'
-main: uno.redstone.redstoneclaims.RedstoneClaims
-api-version: '1.20'
-commands:
-  chunk:
-    description: heh
