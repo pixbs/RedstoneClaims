@@ -61,10 +61,11 @@ class ChunkCommand : CommandExecutor, TabCompleter {
         val regionName = "${sender.name}_$i"
         val region: ProtectedRegion = ProtectedCuboidRegion(regionName, min, max)
 
+        region.owners.addPlayer(sender.name)
         @Suppress("DEPRECATION")
-        region.setFlag(Flags.GREET_MESSAGE, "Welcome!")
+        region.setFlag(Flags.GREET_TITLE, "Welcome\nTo ${sender.name}'s region!")
         @Suppress("DEPRECATION")
-        region.setFlag(Flags.FAREWELL_MESSAGE, "Farewell!")
+        region.setFlag(Flags.FAREWELL_TITLE, "Farewell!\n")
 
         regions?.addRegion(region)
 

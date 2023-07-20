@@ -5,11 +5,12 @@ import uno.redstone.redstoneclaims.commands.ChunkCommand
 
 @Suppress("unused")
 class RedstoneClaims : JavaPlugin() {
-    override fun onLoad() {
+    override fun onEnable() {
         registerCommands()
     }
 
     private fun registerCommands() {
         getCommand("chunk")?.setExecutor(ChunkCommand())
+        getCommand("chunk")?.tabCompleter = ChunkCommand()
     }
 }
