@@ -1,7 +1,7 @@
 name: "RedstoneClaims"
 main: "uno.redstone.redstoneclaims.RedstoneClaims"
-version: "${projectVersion}"
+version: "${internalVersion}"
 api-version: "1.20"
 commands:
   chunk:
-    usage: "/<command> [claim|remove]"
+    usage: "/chunk [claim|remove]"
