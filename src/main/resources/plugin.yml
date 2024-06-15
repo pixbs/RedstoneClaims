@@ -4,4 +4,4 @@ version: "${internalVersion}"
 api-version: "1.20"
 commands:
   chunk:
-    usage: "/chunk [claim|remove|membershipship]"
+    usage: "/chunk [claim|remove]"
