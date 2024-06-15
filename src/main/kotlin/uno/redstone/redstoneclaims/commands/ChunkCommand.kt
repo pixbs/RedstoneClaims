@@ -1,35 +1,37 @@
 package uno.redstone.redstoneclaims.commands
 
-import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
+import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
+
+// TODO: Check for permission before running a command
 
 class ChunkCommand : CommandExecutor, TabCompleter {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>?): Boolean {
         if (args == null) {
             return false
         }
-        return when (args[0]) {
+        return when (args.get(0)) {
             "claim" -> {
-                ChunkClaim(sender)
-                true
+                TODO()
             }
             "remove" -> {
-                ChunkRemove(sender)
-                true
+                TODO()
             }
+            "membership" -> {
+                TODO()
+            }
+
             else -> false
         }
-    }
 
+    }
     override fun onTabComplete(sender: CommandSender, command: Command, label: String, args: Array<out String>?): MutableList<String>? {
-        if (args == null) {
-            return null
-        }
-        return when (args.size) {
-            1 -> mutableListOf("claim", "remove")
-            else -> null
+        return if (args == null) {
+            null
+        } else {
+            mutableListOf("claim", "remove", "ownership")
         }
     }
 }
